@@ -1,0 +1,25 @@
+.btn {
+  font-size: 16px;
+  font-weight: 800;
+  padding: 21px 41px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  background: $yellow;
+  line-height: 1;
+  color: #000;
+  text-decoration: none;
+  border: none;
+  &:hover {
+    background: $yellowHover;
+  }
+  &_transparent {
+    background: transparent;
+    color: #fff;
+    text-transform: none;
+    font-weight: normal;
+    &:hover {
+      background: transparent;
+      color: $yellow;
+    }
+  }
+}
