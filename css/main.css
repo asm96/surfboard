@@ -76,7 +76,7 @@ img {
 }
 
 .hero {
-  background: url(../../img/bg/hero-1.png) no-repeat;
+  background: url(../img/bg/hero-1.png) no-repeat;
   background-size: cover;
   background-color: #1968B1;
   height: 100vh;
@@ -482,7 +482,7 @@ img {
 }
 .order-section:after {
   content: "";
-  background: url(../../img/bg/order.png) no-repeat;
+  background: url(../img/bg/order.png) no-repeat;
   background-size: cover;
   opacity: 0.4;
   top: 0;
