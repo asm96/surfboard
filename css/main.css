@@ -294,10 +294,17 @@ img {
 }
 
 .benefit__image-wrapper {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 128px;
   height: 128px;
-  position: relative;
   background: #F2F5F4;
   border-radius: 50%;
   overflow: hidden;
@@ -306,11 +313,6 @@ img {
 .benefit__icon {
   width: 68px;
   height: 68px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .benefit__title {
@@ -384,6 +386,9 @@ img {
   position: relative;
 }
 .interactive-avatar_active {
+  border-color: #FEDB3F;
+}
+.interactive-avatar:hover {
   border-color: #FEDB3F;
 }
 
@@ -469,28 +474,8 @@ img {
 .order-section {
   position: relative;
   color: #fff;
-}
-.order-section:before {
-  content: "";
-  background: #2B2B2B;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -2;
-}
-.order-section:after {
-  content: "";
   background: url(../img/bg/order.png) no-repeat;
   background-size: cover;
-  opacity: 0.4;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
 }
 .order-section .section__title {
   color: inherit;
@@ -511,7 +496,7 @@ img {
   border-radius: 0;
 }
 .radio_checkbox .radio__visible::before {
-  background: url(../../img/icons/tick.png) center center no-repeat;
+  background: url(../img/icons/tick.png) center center no-repeat;
 }
 .radio:last-child {
   margin-right: 0;

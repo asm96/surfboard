@@ -8,6 +8,9 @@
   &_active {
     border-color: $yellow;
   }
+  &:hover {
+    border-color: $yellow;
+  }
 }
 
 .interactive-avatar__link {
