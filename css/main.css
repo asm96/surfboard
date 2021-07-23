@@ -112,7 +112,8 @@ input {
 
 .hero__title-section {
   width: 46%;
-  margin: 86px 0;
+  margin-top: 87px;
+  margin-bottom: 66px;
 }
 
 .hero__main-title {
@@ -125,7 +126,7 @@ input {
 
 .hero__title-desc {
   font-size: 21px;
-  margin-bottom: 52px;
+  margin-bottom: 38px;
 }
 
 .header {
@@ -281,7 +282,7 @@ input {
 }
 
 .headline-section {
-  padding-bottom: 17px;
+  padding-bottom: 10px;
 }
 
 .headline {
@@ -289,11 +290,11 @@ input {
 }
 
 .headline__title {
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 }
 
 .headline__subtitle {
-  margin-bottom: 49px;
+  margin-bottom: 50px;
   padding: 0 27%;
 }
 
@@ -307,7 +308,7 @@ input {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 0 2.7%;
+  padding: 0 2.76%;
   position: relative;
 }
 .benefits__item:first-child {
@@ -359,7 +360,7 @@ input {
 }
 
 .benefit__title {
-  padding-top: 20px;
+  padding-top: 19px;
   font-weight: bold;
   font-size: 27px;
   color: #292929;
@@ -368,6 +369,10 @@ input {
 
 .benefit__desc {
   font-weight: 300;
+}
+
+.reviews-section {
+  padding-bottom: 10px;
 }
 
 .reviews {
@@ -412,14 +417,15 @@ input {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-left: 38px;
+  margin-left: 39px;
 }
 
 .reviews__title {
   font-size: 27px;
   font-weight: bold;
   color: #292929;
-  margin-bottom: 14px;
+  margin-bottom: 17px;
+  line-height: 1;
 }
 
 .reviews__text {
