@@ -321,7 +321,7 @@ input {
   display: none;
 }
 .benefits__item:before {
-  content: url(../../img/decor/separator.png);
+  content: url(../img/decor/separator.png);
   position: absolute;
   top: 22%;
   right: 0;
