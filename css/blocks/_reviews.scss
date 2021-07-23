@@ -1,3 +1,7 @@
+.reviews {
+  margin-top: 31px;
+}
+
 .reviews__display {
   background: #F8FAF9;
   padding: 42px;
@@ -20,6 +24,9 @@
 }
 
 .reviews__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex: 1;
   margin-left: 38px;
 }
@@ -33,6 +40,7 @@
 
 .reviews__text {
   margin-bottom: 25px;
+  margin-right: 102px;
 }
 
 .reviews__author {
@@ -43,4 +51,11 @@
 .reviews__switcher {
   display: flex;
   justify-content: center;
+}
+
+.reviews__switcher-item {
+  margin-right: 6px;
+  &:last-child {
+    margin-right: 0;
+  }
 }

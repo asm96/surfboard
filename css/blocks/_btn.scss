@@ -8,11 +8,13 @@
   line-height: 1;
   color: #000;
   text-decoration: none;
-  border: none;
+  transition: .3s;
   &:hover {
     background: $yellowHover;
   }
   &_transparent {
+    font-size: $baseFontSize;
+    padding: 21px 18px;
     background: transparent;
     color: #fff;
     text-transform: none;

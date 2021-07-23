@@ -1,9 +1,10 @@
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: 652px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  line-height: 1.23;
 }
 
 .section__title {

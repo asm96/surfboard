@@ -1,4 +1,12 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 23px 0;
+}
+
+.header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,7 +18,11 @@
 }
 
 .menu__item {
-  margin-right: 22px;
+  margin-right: 23px;
+  transition: .3s;
+  &:hover {
+    color: $yellow;
+  }
   &:last-child {
     margin-right: 0;
   }
@@ -27,10 +39,14 @@
   display: flex;
   align-items: center;
   font-weight: bold;
+  transition: .3s;
+  &:hover {
+    color: $yellow;
+  }
 }
 
 .phone-number__icon-elem {
-  width: 13px;
-  height: 13px;
-  margin-right: 6px;
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
 }

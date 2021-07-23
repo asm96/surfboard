@@ -3,25 +3,28 @@
   background-size: cover;
   background-color: $blue;
   height: 100vh;
-  min-height: 650px;
+  min-height: 652px;
   color: #fff;
   padding: 24px 0 65px;
+  position: relative;
 }
 
 .hero__container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
+  padding-top: 55px;
 }
 
 .hero__title-section {
   width: 46%;
+  margin: 86px 0;
 }
 
 .hero__main-title {
   font-size: 48px;
-  line-height: 1.1;
+  line-height: 1.21;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 17px;
@@ -29,5 +32,5 @@
 
 .hero__title-desc {
   font-size: 21px;
-  margin-bottom: 39px;
+  margin-bottom: 52px;
 }

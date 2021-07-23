@@ -1,10 +1,14 @@
 .form {
   display: flex;
+  padding-bottom: 20px;
 }
 
 .form__col {
   flex: 1;
-  margin-right: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-right: 26px;
   &:last-child {
     margin-right: 0;
   }
@@ -12,12 +16,12 @@
 
 .form__row {
   display: flex;
-  margin-bottom: 14px;
+  margin-bottom: 7px;
 }
 
 .form__block {
   flex: 1;
-  margin-right: 13px;
+  margin-right: 16px;
   &:last-child {
     margin-right: 0;
   }
@@ -35,16 +39,16 @@
   &_textarea {
     height: 152px;
     resize: none;
-    margin-bottom: 36px;
+    margin-bottom: 28px;
   }
 }
 
 .form__controls {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 16px;
 }
 
 .form__btns {
-  margin-top: 44px;
+  margin-top: 45px;
+  margin-left: -8px;
 }

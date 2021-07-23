@@ -1,5 +1,13 @@
-html,
-body {
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
   height: 100%;
 }
 
@@ -9,12 +17,10 @@ body {
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: relative;
   color: #666;
 }
 
 .wrapper {
-  position: relative;
   width: 100%;
   min-width: $containerWidth + 20px;
   min-height: 100%;
@@ -24,7 +30,6 @@ body {
 .container {
   width: $containerWidth;
   margin: 0 auto;
-  position: relative;
 }
 
 h1,
@@ -33,12 +38,13 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
+  margin: 0;
   font-weight: normal;
 }
 
 table {
   border-collapse: collapse;
+  border-spacing: 0;
 }
 
 ul {
@@ -55,20 +61,22 @@ p {
   margin: 0;
 }
 
-footer {
-  position: relative;
-  width: 100%;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 a {
   color: inherit;
+  display: inline-block;
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input {
+  border: none;
 }

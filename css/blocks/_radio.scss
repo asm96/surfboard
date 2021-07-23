@@ -2,10 +2,12 @@
   display: flex;
   cursor: pointer;
   user-select: none;
-  margin-right: 8px;
+  margin-right: 17px;
+  margin-bottom: 16px;
   &_checkbox {
+    margin-bottom: 0;
     .radio__visible {
-      border-radius: 0;
+      border-radius: 4px;
       &::before {
         background: url(../img/icons/tick.png) center center no-repeat;
       }
