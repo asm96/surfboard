@@ -1,0 +1,25 @@
+.headline-section {
+  padding-bottom: rem(10px);
+  @include tablets {
+    min-height: rem(1059px);
+  }
+  @include phones {
+    min-height: rem(795px);
+  }
+}
+
+.headline {
+  text-align: center;
+}
+
+.headline__title {
+  margin-bottom: rem(16px);
+}
+
+.headline__subtitle {
+  margin-bottom: rem(50px);
+  padding: 0 27%;
+  @include phones {
+    padding: 0 5%;
+  }
+}

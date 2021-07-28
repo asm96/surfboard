@@ -1,0 +1,16 @@
+.map-section {
+  background: url(../img/content/map.png) no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: rem(739px);
+  color: $black;
+  font-size: rem(21px);
+  @include tablets {
+    min-height: rem(670px);
+    height: rem(670px);
+  }
+  @include phones {
+    min-height: rem(712px);
+    height: rem(712px);
+  }
+}

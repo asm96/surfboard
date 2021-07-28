@@ -1,9 +1,9 @@
 .btn {
-  font-size: 16px;
+  font-size: rem(16px);
   font-weight: 800;
-  padding: 21px 41px;
+  padding: rem(21px) rem(41px);
   text-transform: uppercase;
-  border-radius: 100px;
+  border-radius: rem(100px);
   background: $yellow;
   line-height: 1;
   color: #000;
@@ -14,7 +14,7 @@
   }
   &_transparent {
     font-size: $baseFontSize;
-    padding: 21px 18px;
+    padding: rem(21px) rem(18px);
     background: transparent;
     color: #fff;
     text-transform: none;

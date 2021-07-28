@@ -3,50 +3,23 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 23px 0;
+  padding: rem(23px) 0;
+  @include tablets {
+    background-color: $blue;
+    padding: rem(28px) 0;
+  }
+  @include phones {
+    padding: rem(31px) 0;
+  }
 }
 
 .header__container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
-.menu__list {
-  display: flex;
-  align-items: center;
-}
-
-.menu__item {
-  margin-right: 23px;
-  transition: .3s;
-  &:hover {
-    color: $yellow;
-  }
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-.menu__link {
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.phone-number {
-  font-size: 22px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  transition: .3s;
-  &:hover {
-    color: $yellow;
-  }
-}
-
-.phone-number__icon-elem {
-  width: 15px;
-  height: 15px;
-  margin-right: 4px;
+.logo {
+  width: rem(56px);
+  height: rem(40px);
 }
