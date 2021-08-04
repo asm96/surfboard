@@ -1,0 +1,100 @@
+.parameters {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: rem(47px);
+  &:hover {
+    .parameters__button {
+      background: $blueIconHover;
+    }
+    .parameters__dropdown {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+.parameters__button {
+  width: rem(91px);
+  height: rem(91px);
+  background: $blueIcon;
+  border-radius: rem(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  transition: .3s;
+}
+
+.parameters__button-icon {
+  margin-bottom: rem(6px);
+}
+
+.parameters__button-icon-elem {
+  width: rem(38px);
+  height: rem(38px);
+  display: block;
+}
+
+.parameters__button-text {
+  font-size: rem(14px);
+  font-weight: bold;
+  line-height: 1.21;
+  text-transform: uppercase;
+}
+
+.parameters__icon {
+  color: #000;
+  width: 32px;
+  height: 32px;
+}
+
+.parameters__dropdown {
+  color: $black;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: rem(273px);
+  background: rgba(255, 255, 255, .93);
+  border-radius: rem(5px);
+  padding: rem(21px) rem(24px);
+  transition: opacity .3s;
+  opacity: 0;
+  pointer-events: none;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 50%;
+    width: rem(30px);
+    left: rem(-30px);
+  }
+}
+
+.parameters__table {
+  width: 100%
+}
+
+.parameters__table-row {
+  border-bottom: rem(14px) solid transparent;
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.parameters__table-cell {
+  vertical-align: middle;
+  text-align: right;
+}
+
+.parameters__text-container {
+  text-align: left;
+  padding-left: rem(10px);
+}
+
+.parameters__text {
+  font-size: rem(16px);
+  font-weight: bold;
+
+}

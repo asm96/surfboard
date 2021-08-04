@@ -1,6 +1,7 @@
 .menu {
   margin: 0 rem(30px);
   padding-top: rem(8px);
+
   @include tablets {
     display: none;
   }
@@ -17,9 +18,11 @@
   margin-right: rem(23px);
   margin-bottom: rem(10px);
   transition: .3s;
+
   &:hover {
     color: $yellow;
   }
+
   &:last-child {
     margin-right: 0;
   }
@@ -29,4 +32,27 @@
   text-decoration: none;
   font-weight: bold;
   white-space: nowrap;
+}
+
+.menu_vertical {
+  display: block;
+  font-size: rem(36px);
+  color: #fff;
+  text-align: center;
+
+  .menu__list {
+    flex-direction: column;
+  }
+
+  .menu__item {
+    margin-right: 0;
+    margin-bottom: rem(26px);
+    @include phones {
+      margin-bottom: rem(31px);
+    }
+  }
+
+  .menu__link {
+    font-weight: normal;
+  }
 }

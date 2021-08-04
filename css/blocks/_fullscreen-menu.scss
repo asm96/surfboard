@@ -1,0 +1,36 @@
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #333537;
+  padding-top: rem(150px);
+  z-index: 1000;
+  overflow: hidden;
+  display: none;
+  @include phones {
+    padding-top: rem(160px);
+  }
+}
+
+.fullscreen-menu__close {
+  display: block;
+  position: absolute;
+  top: rem(45px);
+  right: rem(45px);
+}
+
+.fullscreen-menu__close-icon {
+  color: #fff;
+  width: rem(20px);
+  height: rem(20px);
+  opacity: .7;
+}
+
+.fullscreen-menu.active {
+  display: flex;
+}

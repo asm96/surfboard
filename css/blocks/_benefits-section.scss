@@ -1,4 +1,4 @@
-.headline-section {
+.benefits-section {
   padding-bottom: rem(10px);
   @include tablets {
     min-height: rem(1059px);
@@ -8,15 +8,12 @@
   }
 }
 
-.headline {
-  text-align: center;
-}
-
-.headline__title {
+.benefits-section__title {
   margin-bottom: rem(16px);
 }
 
-.headline__subtitle {
+.benefits-section__subtitle {
+  text-align: center;
   margin-bottom: rem(50px);
   padding: 0 27%;
   @include phones {
