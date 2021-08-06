@@ -1,7 +1,7 @@
 var hamburger = document.querySelector(".hamburger");
 var menu = document.querySelector(".fullscreen-menu");
 var closeBtn = menu.querySelector(".fullscreen-menu__close");
-var menuItems = document.querySelectorAll(".menu__item");
+var menuItems = document.querySelectorAll(".menu_vertical > .menu__list > .menu__item");
 hamburger.addEventListener("click", function (e) {
   e.preventDefault(),
     menu.classList.add("active")
