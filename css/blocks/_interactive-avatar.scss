@@ -6,7 +6,7 @@
   overflow: hidden;
   position: relative;
   transition: .2s;
-  &_active {
+  &.active {
     border: rem(6px) solid $yellow;
   }
   &:hover {

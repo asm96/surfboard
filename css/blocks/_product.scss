@@ -65,6 +65,7 @@
 .product__text {
   margin-bottom: rem(24px);
   padding-right: rem(25px);
+  padding-left: rem(4px);
   @include tablets {
     text-align: center;
   }
@@ -93,9 +94,6 @@
     padding-right: 0;
     margin-left: rem(45px);
     margin-right: rem(15px);
-  }
-  &_btn {
-    margin-left: rem(23px);
   }
 }
 

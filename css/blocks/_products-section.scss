@@ -1,10 +1,12 @@
 .products-section {
   min-height: rem(642px);
   background: #F8FAF9;
+
   @include tablets {
     min-height: rem(864px);
     padding-bottom: rem(50px);
   }
+
   @include phones {
     min-height: rem(918px);
   }
@@ -13,6 +15,13 @@
 .product-slider {
   position: relative;
   height: 100%;
+
+  .bx-wrapper {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    margin-bottom: rem(40px);
+  }
 }
 
 .product-slider__arrow {
@@ -38,6 +47,7 @@
 
 .products__item {
   padding-left: rem(65px);
+
   @include tablets {
     padding-left: 0;
   }
