@@ -1,0 +1,14 @@
+.map-section {
+  background-size: cover;
+  position: relative;
+  color: $black;
+  font-size: rem(21px);
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

@@ -1,0 +1,15 @@
+.order-section {
+  color: #fff;
+  background: url(./img/bg/order.png) center center/cover no-repeat;
+  background-size: cover;
+  .section__title {
+    color: inherit;
+    padding-bottom: rem(60px);
+    @include tablets {
+      padding-bottom: rem(30px);
+    }
+  }
+  @include tablets {
+    background: url(./img/bg/order-tablet.png) center center/cover no-repeat;
+  }
+}
