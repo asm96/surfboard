@@ -102,7 +102,7 @@ task("icons", () => {
 task("server", () => {
   browserSync.init({
     server: {
-      baseDir: "./docs",
+      baseDir: `./${DIST_PATH}`,
     },
     open: false,
   });
