@@ -16,7 +16,7 @@ const svgo = require("gulp-svgo");
 const svgSprite = require("gulp-svg-sprite");
 const gulpif = require("gulp-if");
 const env = process.env.NODE_ENV;
-const { SRC_PATH, DIST_PATH, STYLES_LIBS, JS_LIBS } = require("./gulp.config");
+const { SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS } = require("./gulp.config");
 
 sass.compiler = require("node-sass");
 
@@ -37,30 +37,28 @@ task("copy:img", () => {
 });
 
 task("styles", () => {
-  return src([...STYLES_LIBS, "src/styles/main.scss"])
-    .pipe(gulpif(env == "dev", sourcemaps.init()))
+  return src([...STYLE_LIBS, `${SRC_PATH}/styles/main.scss`])
+    .pipe(gulpif(env === "dev", sourcemaps.init()))
     .pipe(concat("main.min.scss"))
     .pipe(sassGlob())
     .pipe(sass().on("error", sass.logError))
-    .pipe(px2rem())
     .pipe(
       gulpif(
-        env == "dev",
+        env === "prod",
         autoprefixer({
           cascade: false,
         })
       )
     )
-    .pipe(gulpif(env == "prod", gcmq()))
-    .pipe(gulpif(env == "prod", cleanCSS()))
-    .pipe(gulpif(env == "dev", sourcemaps.write()))
+    .pipe(gulpif(env === "prod", cleanCSS()))
+    .pipe(gulpif(env === "dev", sourcemaps.write()))
     .pipe(dest(DIST_PATH))
     .pipe(reload({ stream: true }));
 });
 
 task("scripts", () => {
   return src([...JS_LIBS, `${SRC_PATH}/scripts/*.js`])
-    .pipe(gulpif(env == "dev", sourcemaps.init()))
+    .pipe(gulpif(env === "dev", sourcemaps.init()))
     .pipe(concat("main.min.js", { newLine: ";" }))
     .pipe(
       gulpif(
@@ -71,7 +69,7 @@ task("scripts", () => {
       )
     )
     .pipe(gulpif(env === "prod", uglify()))
-    .pipe(gulpif(env == "dev", sourcemaps.write()))
+    .pipe(gulpif(env === "dev", sourcemaps.write()))
     .pipe(dest(DIST_PATH))
     .pipe(reload({ stream: true }));
 });
@@ -115,22 +113,18 @@ task("watch", () => {
   watch(`./${SRC_PATH}/*.html`, series("copy:html"));
   watch(`./${SRC_PATH}/img/**/*`, series("copy:img"));
   watch(`./${SRC_PATH}/scripts/*.js`, series("scripts"));
-  watch(`./${SRC_PATH}/img/icons/*.svg`, series("icons"));
 });
 
 task(
   "default",
   series(
     "clean",
-    parallel("copy:html", "copy:img", "styles", "scripts", "icons"),
+    parallel("copy:html", "copy:img", "styles", "scripts"),
     parallel("watch", "server")
   )
 );
 
 task(
   "build",
-  series(
-    "clean",
-    parallel("copy:html", "copy:img", "styles", "scripts", "icons")
-  )
+  series("clean", parallel("copy:html", "copy:img", "styles", "scripts"))
 );

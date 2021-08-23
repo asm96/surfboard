@@ -3,7 +3,7 @@
   const playerContainer = $(".player");
 
   let eventsInit = () => {
-    $(".player__start").click((e) => {
+    $(".player__start").on("click", (e) => {
       e.preventDefault();
 
       if (playerContainer.hasClass("paused")) {
@@ -13,7 +13,7 @@
       }
     });
 
-    $(".player__playback").click((e) => {
+    $(".player__playback").on("click", (e) => {
       const bar = $(e.currentTarget);
       const clickedPosition = e.originalEvent.layerX;
       const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
@@ -27,7 +27,7 @@
       player.seekTo(newPlaybackPositionSec);
     });
 
-    $(".player__splash").click((e) => {
+    $(".player__splash").on("click", (e) => {
       player.playVideo();
     });
   };

@@ -18,7 +18,7 @@
         {
           draggable: false,
           iconLayout: "default#image",
-          iconImageHref: "../img/icons/marker.svg",
+          iconImageHref: "./img/icons/marker.svg",
           iconImageSize: [46, 57],
           iconImageOffset: [-35, -52],
         }
